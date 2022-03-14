@@ -14,7 +14,7 @@ import { HeroService } from 'src/app/services/hero.service';
 export class HeroSearchComponent implements OnInit {
 
   heroes$!: Observable<Hero[]>;
-  private searchTerms = new Subject<string>();
+  private searchTerms = new Subject<string>(); // Subject = particolare tipo di osservabile che va a mappare una chiamata che si ripete molte volte.
 
   constructor(private heroService: HeroService) {}
 
