@@ -35,8 +35,7 @@
                     </div>
                 </div>
 
-                <button style="color: black;" type="submit" class="btn btn-success" (click)="save()" [disabled]="!heroForm.form.valid">SALVA</button>
-                <button type="button" class="btn btn-default" (click)="newHero(); heroForm.reset()">New Hero</button>
+                <button style="color: black;" type="submit" class="btn btn-success" (click)="onSubmit()" [disabled]="!heroForm.form.valid">Submit</button>
             </form>
         </div>
 
@@ -56,6 +55,7 @@
             </div>
             <br>
             <button type="button" class="btn btn-primary" (click)="submitted=false">Edit</button>
+            <button type="button" class="btn btn-primary" (click)="save()">SAVE</button>
         </div>
     </div>
 </div>

@@ -74,8 +74,4 @@ export class HeroDetailComponent implements OnInit {
     // })
   }
 
-  newHero() {
-    this.hero = { id: '42', name: '', power: '' };
-  }
-
 }
