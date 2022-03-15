@@ -6,9 +6,10 @@
         <input id="hero-name" [(ngModel)]="hero.name" placeholder="name">
     </div>
     <img class="profile-photo" src="{{hero.img}}" alt="user profile img"> -->
-    <div class="container">
+    <div *ngIf="hero" class="container">
         <div [hidden]="submitted">
-            <h1>Hero Form</h1>
+            <h1 *ngIf="isNewHero">New Hero</h1>
+            <h1 *ngIf="!isNewHero">Hero Details</h1>
             <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
                 <div class="form-group">
                     <label for="name">Name</label>

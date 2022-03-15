@@ -30,6 +30,7 @@ export class HeroDetailComponent implements OnInit {
       this.heroService.getHero(id).subscribe((data) => {
         if (data) {
           this.isNewHero = false;
+          this.submitted = true;
           this.hero = data;
         }
       });
